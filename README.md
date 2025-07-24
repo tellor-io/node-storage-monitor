@@ -1,6 +1,10 @@
 # node-storage-monitor
 Simple discord alerts for when your tellor node server's storage is getting full.
 
+## Prerequisites:
+- uv https://docs.astral.sh/uv/getting-started/installation/
+- A discord webhook
+
 ## Installation and Operation:
 1. Clone the repo:
 ```
