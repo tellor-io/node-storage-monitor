@@ -9,10 +9,10 @@ WEBHOOK_URL = "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOK
 
 # Custom thresholds (optional - script has sensible defaults)
 CUSTOM_THRESHOLDS = {
-    'layer_dir': {'warning': 10.0, 'critical': 20.0},      # GB
-    'home_dir': {'warning': 50.0, 'critical': 100.0},      # GB
+    'layer_dir': {'warning': 350.0, 'critical': 390.0},      # GB
+    'home_dir': {'warning': 10.0, 'critical': 25.0},      # GB
     'journal_logs': {'warning': 5.0, 'critical': 10.0},    # GB
-    'system_storage': {'warning': 80.0, 'critical': 95.0}  # %
+    'system_storage': {'warning': 75.0, 'critical': 80.0}  # %
 }
 
 # State file location (optional)
