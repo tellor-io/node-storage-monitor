@@ -1,0 +1,25 @@
+[Unit]
+Description=Storage Monitor Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=spuddy
+Group=spuddy
+WorkingDirectory=/home/spuddy/projects/monitor/node-storage-monitor
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=PYTHONPATH=/home/spuddy/projects/monitor/node-storage-monitor
+ExecStart=/usr/bin/python3 storage_monitor.py
+Restart=always
+RestartSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=storage-monitor
+TimeoutStopSec=30
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target 
