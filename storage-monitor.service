@@ -4,22 +4,16 @@ After=network.target
 Wants=network.target
 
 [Service]
-Type=simple
-User=spuddy
-Group=spuddy
-WorkingDirectory=/home/spuddy/projects/monitor/node-storage-monitor
-Environment=PATH=/usr/bin:/usr/local/bin
-Environment=PYTHONPATH=/home/spuddy/projects/monitor/node-storage-monitor
-ExecStart=/usr/bin/python3 storage_monitor.py
-Restart=always
-RestartSec=30
-NoNewPrivileges=true
-PrivateTmp=true
+User=USERNAME
+Group=USERNAME
+WorkingDirectory=/home/USERNAME/node-storage-monitor
+Environment=PYTHONPATH=/home/USERNAME/node-storage-monitor
+ExecStart=/home/USERNAME/node-storage-monitor/.venv/bin/python storage_monitor.py
 StandardOutput=journal
 StandardError=journal
-SyslogIdentifier=storage-monitor
-TimeoutStopSec=30
-KillMode=mixed
+Restart=always
+RestartSec=120
+NoNewPrivileges=true
 
 [Install]
-WantedBy=multi-user.target 
+WantedBy=multi-user.target
