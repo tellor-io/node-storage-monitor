@@ -16,5 +16,5 @@ cp config_example.py config.py && nano config.py
 ```
 4. Run this command in tmux or screen:
 ```
-while true; do python storage_monitor.py; sleep 600; done
+python storage_monitor.py
 ```
