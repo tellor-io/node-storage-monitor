@@ -12,7 +12,7 @@ git clone https://github.com/tellor-io/node-storage-monitor
 ```
 2. Make a python environment for running the monitor. We will use uv because it's in style:
 ```
-uv venv && source .venv/bin/activate
+cd node-storage-monitor && uv venv && source .venv/bin/activate
 ```
 3. Copy config_example.py to config.py and edit with your unique configuration:
 ```
